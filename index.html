@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>心理咨询师 周大伟 | 馨宇心理咨询</title>
+  <meta name="description" content="国家二级心理咨询师周大伟，10年从业经验，擅长儿童青少年成长、家庭咨询、职业生涯规划。">
+  <meta property="og:title" content="心理咨询师 周大伟 | 馨宇心理咨询">
+  <meta property="og:description" content="硕士 · 国家二级心理咨询师 · 10年从业经验 · 存在-人本主义取向">
+  <meta property="og:type" content="article">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+    :root {
+      --primary: #2C6E6A;
+      --primary-light: #3D8B85;
+      --primary-dark: #1E4F4C;
+      --accent: #E8B86D;
+      --accent-light: #F2D4A0;
+      --warm: #FDF6EC;
+      --warm-deep: #F5EDE0;
+      --text: #2D3436;
+      --text-light: #636E72;
+      --text-muted: #B2BEC3;
+      --white: #FFFFFF;
+      --shadow: rgba(44, 110, 106, 0.08);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--warm);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 24px 40px;
+      background: linear-gradient(165deg, var(--primary-dark) 0%, var(--primary) 40%, var(--primary-light) 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -30%;
+      width: 160%;
+      height: 160%;
+      background: radial-gradient(circle at 30% 40%, rgba(232, 184, 109, 0.12) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 60%, rgba(255,255,255,0.05) 0%, transparent 40%);
+      animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(30px, -30px) rotate(1deg); }
+      66% { transform: translate(-20px, 20px) rotate(-1deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 420px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 20px;
+      background: rgba(232, 184, 109, 0.2);
+      border: 1px solid rgba(232, 184, 109, 0.4);
+      border-radius: 100px;
+      color: var(--accent-light);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 32px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      color: var(--primary-dark);
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 700;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2),
+                  0 0 0 4px rgba(255,255,255,0.15);
+      position: relative;
+    }
+
+    .hero-avatar::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px dashed rgba(232, 184, 109, 0.3);
+      animation: spin 30s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-name {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+      letter-spacing: 4px;
+    }
+
+    .hero-title {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .hero-tag {
+      padding: 6px 16px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 100px;
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+      backdrop-filter: blur(4px);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.4);
+      font-size: 12px;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    .scroll-hint svg {
+      width: 20px;
+      height: 20px;
+      stroke: rgba(255,255,255,0.4);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ========== SECTIONS ========== */
+    .section {
+      padding: 60px 24px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title .icon {
+      font-size: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      margin-bottom: 28px;
+    }
+
+    /* ========== INTRO ========== */
+    .intro-section {
+      background: var(--white);
+      margin: 0;
+      padding: 60px 24px;
+    }
+
+    .intro-card {
+      background: var(--warm);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-card::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 12px;
+      font-family: 'Noto Serif SC', serif;
+      font-size: 80px;
+      color: var(--primary);
+      opacity: 0.08;
+      line-height: 1;
+    }
+
+    .intro-quote {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 16px;
+      color: var(--primary-dark);
+      line-height: 2;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+
+    .intro-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .intro-text {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 2;
+    }
+
+    /* ========== STATS ========== */
+    .stats-section {
+      padding: 50px 24px 60px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px 12px;
+      text-align: center;
+      box-shadow: 0 2px 12px var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .stat-card:active {
+      transform: scale(0.97);
+    }
+
+    .stat-number {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .stat-number .unit {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ========== QUALIFICATIONS ========== */
+    .qual-section {
+      background: var(--white);
+      margin: 0;
+      padding: 60px 24px;
+    }
+
+    .qual-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .qual-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      background: var(--warm);
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .qual-item:active {
+      transform: scale(0.98);
+    }
+
+    .qual-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .qual-text {
+      flex: 1;
+    }
+
+    .qual-text h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .qual-text p {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* ========== SPECIALTY ========== */
+    .specialty-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .specialty-card {
+      padding: 24px 18px;
+      background: var(--white);
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: 0 2px 12px var(--shadow);
+      border-top: 3px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .specialty-card:nth-child(1) { border-top-color: var(--primary); }
+    .specialty-card:nth-child(2) { border-top-color: var(--accent); }
+    .specialty-card:nth-child(3) { border-top-color: #E17055; }
+    .specialty-card:nth-child(4) { border-top-color: #6C5CE7; }
+
+    .specialty-card:active {
+      transform: scale(0.97);
+    }
+
+    .specialty-emoji {
+      font-size: 32px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .specialty-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .specialty-card p {
+      font-size: 12px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ========== PROJECTS ========== */
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .project-item {
+      padding: 20px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px var(--shadow);
+      border-left: 4px solid var(--accent);
+      position: relative;
+    }
+
+    .project-item h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+      padding-right: 30px;
+    }
+
+    .project-item p {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    .project-item .org-icon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 20px;
+      opacity: 0.6;
+    }
+
+    /* ========== TESTIMONIALS ========== */
+    .test-section {
+      background: linear-gradient(165deg, var(--primary-dark) 0%, var(--primary) 100%);
+      margin: 0;
+      padding: 60px 24px;
+    }
+
+    .test-section .section-title {
+      color: var(--white);
+    }
+
+    .test-section .section-subtitle {
+      color: rgba(255,255,255,0.5);
+    }
+
+    .test-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .test-card {
+      padding: 24px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      backdrop-filter: blur(8px);
+    }
+
+    .test-stars {
+      color: var(--accent);
+      font-size: 14px;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .test-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.9;
+      margin-bottom: 12px;
+    }
+
+    .test-author {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ========== CTA ========== */
+    .cta-section {
+      padding: 60px 24px 40px;
+      text-align: center;
+    }
+
+    .cta-box {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px 28px;
+      box-shadow: 0 8px 32px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    }
+
+    .cta-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .cta-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 28px;
+      line-height: 1.8;
+    }
+
+    .cta-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+    }
+
+    .cta-btn:active {
+      transform: scale(0.97);
+    }
+
+    .cta-btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(44, 110, 106, 0.3);
+    }
+
+    .cta-btn-secondary {
+      background: var(--warm);
+      color: var(--primary);
+      border: 1px solid rgba(44, 110, 106, 0.15);
+    }
+
+    .cta-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .wechat-id {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%);
+      border: 1px dashed var(--primary-light);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .wechat-id:active {
+      transform: scale(0.97);
+      background: linear-gradient(135deg, #C8E6C9 0%, #DCEDC8 100%);
+    }
+
+    .wechat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .wechat-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1px;
+      font-family: 'SF Mono', 'Menlo', monospace;
+    }
+
+    .wechat-copy {
+      font-size: 11px;
+      color: var(--primary-light);
+      background: rgba(44, 110, 106, 0.1);
+      padding: 3px 10px;
+      border-radius: 100px;
+      transition: all 0.3s;
+    }
+
+    .wechat-copy.copied {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .footer-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .footer-line {
+      width: 30px;
+      height: 2px;
+      background: var(--accent);
+      margin: 0 auto 16px;
+    }
+
+    .footer-copy {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* ========== ANIMATIONS ========== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== SHARE TIP (shown on first visit) ========== */
+    .share-tip {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      padding-top: 60px;
+    }
+
+    .share-tip.show {
+      display: flex;
+    }
+
+    .share-tip-content {
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .share-tip-content .arrow {
+      font-size: 48px;
+      animation: pointUp 1s ease-in-out infinite;
+    }
+
+    @keyframes pointUp {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .share-tip-content p {
+      font-size: 16px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">馨宇心理咨询</div>
+      <div class="hero-avatar">伟</div>
+      <h1 class="hero-name">周大伟</h1>
+      <p class="hero-title">心理咨询师 · 存在-人本主义取向</p>
+      <div class="hero-tags">
+        <span class="hero-tag">硕士</span>
+        <span class="hero-tag">国家二级</span>
+        <span class="hero-tag">10年经验</span>
+        <span class="hero-tag">家庭治疗</span>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>向下滚动</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- INTRO QUOTE -->
+  <section class="intro-section">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-title"><span class="icon">💬</span> 咨询寄语</div>
+      <div class="intro-card fade-in">
+        <p class="intro-quote">
+          心理咨询的过程是一个成长的过程。有的时候我们身体长得太快，从而忽略了心灵的成长——而这个成长，又是一门必修课。越早修完，越早体会到人生的幸福。
+        </p>
+        <div class="intro-divider"></div>
+        <p class="intro-text">
+          硕士学历，国家二级心理咨询师，家庭教育指导师，上海心理学会心理测量师。长期接受系统式家庭治疗咨询理论及督导课程训练，在家庭治疗理论框架下开展个体和家庭咨询。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-title"><span class="icon">📊</span> 专业背景</div>
+      <p class="section-subtitle">PROFESSIONAL BACKGROUND</p>
+      <div class="stats-grid fade-in">
+        <div class="stat-card">
+          <div class="stat-number">10<span class="unit">年</span></div>
+          <div class="stat-label">从业经验</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4<span class="unit">项</span></div>
+          <div class="stat-label">专业资质</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5<span class="unit">+</span></div>
+          <div class="stat-label">公益项目</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALIFICATIONS -->
+  <section class="qual-section">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-title"><span class="icon">🎓</span> 专业资质</div>
+      <p class="section-subtitle">QUALIFICATIONS</p>
+      <div class="qual-list fade-in">
+        <div class="qual-item">
+          <div class="qual-icon">📜</div>
+          <div class="qual-text">
+            <h4>国家二级心理咨询师</h4>
+            <p>国家级专业资质认证</p>
+          </div>
+        </div>
+        <div class="qual-item">
+          <div class="qual-icon">👨‍👩‍👧</div>
+          <div class="qual-text">
+            <h4>家庭教育指导师</h4>
+            <p>专业家庭教育咨询资质</p>
+          </div>
+        </div>
+        <div class="qual-item">
+          <div class="qual-icon">📐</div>
+          <div class="qual-text">
+            <h4>上海心理学会心理测量师</h4>
+            <p>专业心理评估与测量能力</p>
+          </div>
+        </div>
+        <div class="qual-item">
+          <div class="qual-icon">🏫</div>
+          <div class="qual-text">
+            <h4>系统式家庭治疗受训</h4>
+            <p>长期接受理论及督导课程训练</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALTY -->
+  <section class="specialty-section">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-title"><span class="icon">🎯</span> 擅长领域</div>
+      <p class="section-subtitle">SPECIALIZATIONS</p>
+      <div class="specialty-grid fade-in">
+        <div class="specialty-card">
+          <span class="specialty-emoji">🧒</span>
+          <h4>青少年成长</h4>
+          <p>儿童及青少年心理成长咨询，助力健康成长</p>
+        </div>
+        <div class="specialty-card">
+          <span class="specialty-emoji">🏠</span>
+          <h4>家庭咨询</h4>
+          <p>系统式家庭治疗，改善家庭关系与沟通</p>
+        </div>
+        <div class="specialty-card">
+          <span class="specialty-emoji">🚀</span>
+          <h4>职业规划</h4>
+          <p>职业生涯规划咨询，找到方向与动力</p>
+        </div>
+        <div class="specialty-card">
+          <span class="specialty-emoji">🏢</span>
+          <h4>企业咨询</h4>
+          <p>企业管理咨询与EAP员工心理援助</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects-section" style="background: var(--white); margin: 0;">
+    <div class="section" style="padding-top: 60px; padding-bottom: 60px;">
+      <div class="section-title"><span class="icon">🤝</span> 合作项目</div>
+      <p class="section-subtitle">COLLABORATIONS</p>
+      <div class="project-list fade-in">
+        <div class="project-item">
+          <span class="org-icon">🎵</span>
+          <h4>青致蓝公益 · 全国乡村音乐教师心理公益项目</h4>
+          <p>联合上海音乐学院 · 培训讲师</p>
+        </div>
+        <div class="project-item">
+          <span class="org-icon">♿</span>
+          <h4>杨浦区残联心理健康项目</h4>
+          <p>培训讲师</p>
+        </div>
+        <div class="project-item">
+          <span class="org-icon">🏥</span>
+          <h4>普陀区利群医院</h4>
+          <p>医生心理培训讲师</p>
+        </div>
+        <div class="project-item">
+          <span class="org-icon">🏘️</span>
+          <h4>闵行区社区公益项目</h4>
+          <p>心理讲师</p>
+        </div>
+        <div class="project-item">
+          <span class="org-icon">💼</span>
+          <h4>上海毕马威会计师事务所 KPMG</h4>
+          <p>EAP（员工心理援助计划）讲师</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="test-section">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-title"><span class="icon">⭐</span> 来访者评价</div>
+      <p class="section-subtitle">CLIENT TESTIMONIALS</p>
+      <div class="test-cards fade-in">
+        <div class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">周老师人很真诚，用心交流。咨询后感觉整个人轻松了很多，看待问题的角度也变了。</p>
+          <p class="test-author">—— 来访者 李女士</p>
+        </div>
+        <div class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">很耐心，和蔼可亲。和周老师咨询完，感觉自己没有那么焦虑了，学会了用新的方式面对压力。</p>
+          <p class="test-author">—— 来访者 王先生</p>
+        </div>
+        <div class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">周老师帮助我们家庭改善了亲子关系，孩子也更愿意和我们沟通了。非常感谢！</p>
+          <p class="test-author">—— 来访者 张女士</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-box fade-in">
+      <div class="cta-title">开始你的成长之旅</div>
+      <p class="cta-desc">
+        每一次咨询，都是一次向内的探索。<br>
+        无论你正在经历什么，这里都有一个安全的空间等待着你。
+      </p>
+      <div class="cta-methods">
+        <a href="weixin://dl/chat?xlzxszdw" class="cta-btn cta-btn-primary">
+          💬 添加微信预约咨询
+        </a>
+        <div class="wechat-id" onclick="copyWechat()">
+          <span class="wechat-label">微信号</span>
+          <span class="wechat-value" id="wechatId">xlzxszdw</span>
+          <span class="wechat-copy" id="copyTip">点击复制</span>
+        </div>
+        <a href="tel:16712112225" class="cta-btn cta-btn-secondary">
+          📞 16712112225
+        </a>
+      </div>
+      <p class="cta-note">🌿 首次咨询可享免费30分钟评估 · 严格保密</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">馨宇心理咨询</div>
+    <p class="footer-desc">专业 · 温暖 · 陪伴你成长</p>
+    <div class="footer-line"></div>
+    <p class="footer-copy">© 2026 馨宇心理咨询 · 周大伟</p>
+  </footer>
+
+  <script>
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Copy WeChat ID
+    function copyWechat() {
+      const wechatId = 'xlzxszdw';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(wechatId).then(() => {
+          const tip = document.getElementById('copyTip');
+          tip.textContent = '已复制 ✓';
+          tip.classList.add('copied');
+          setTimeout(() => {
+            tip.textContent = '点击复制';
+            tip.classList.remove('copied');
+          }, 2000);
+        });
+      } else {
+        // Fallback for older browsers
+        const input = document.createElement('input');
+        input.value = wechatId;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        const tip = document.getElementById('copyTip');
+        tip.textContent = '已复制 ✓';
+        tip.classList.add('copied');
+        setTimeout(() => {
+          tip.textContent = '点击复制';
+          tip.classList.remove('copied');
+        }, 2000);
+      }
+    }
+
+    // WeChat share config placeholder
+    // In production, configure wx.config() with proper signature
+    if (typeof wx !== 'undefined') {
+      wx.ready(function() {
+        wx.updateAppMessageShareData({
+          title: '心理咨询师 周大伟 | 馨宇心理咨询',
+          desc: '硕士 · 国家二级心理咨询师 · 10年从业经验 · 擅长青少年成长与家庭咨询',
+          link: window.location.href,
+          imgUrl: '' // Add your share image URL
+        });
+        wx.updateTimelineShareData({
+          title: '心理咨询师 周大伟 | 馨宇心理咨询 — 硕士 · 国家二级 · 10年经验',
+          link: window.location.href,
+          imgUrl: ''
+        });
+      });
+    }
+  </script>
+</body>
+</html>
