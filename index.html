@@ -86,20 +86,24 @@
 
     .hero-badge {
       display: inline-block;
-      padding: 8px 16px;
+      padding: 8px 24px;
       background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 100px;
       margin-bottom: 32px;
       backdrop-filter: blur(4px);
     }
 
-    .hero-logo-img {
-      width: 160px;
-      height: auto;
-      max-height: 40px;
-      object-fit: contain;
-      display: block;
+    .logo-text {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.95);
+      letter-spacing: 6px;
+      background: linear-gradient(135deg, #ffffff 0%, #E8B86D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero-avatar {
@@ -792,7 +796,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge"><img src="logo.jpg" alt="馨宇心理咨询" class="hero-logo-img"></div>
+      <div class="hero-badge"><span class="logo-text">馨宇心理咨询</span></div>
       <div class="hero-avatar"><img src="avatar.jpg" alt="周大伟"></div>
       <h1 class="hero-name">周大伟</h1>
       <p class="hero-title">心理咨询师 · 认知行为疗法（CBT）取向</p>
