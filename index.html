@@ -99,21 +99,21 @@
     }
 
     .hero-avatar {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
       margin: 0 auto 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 42px;
-      color: var(--primary-dark);
-      font-family: 'Noto Serif SC', serif;
-      font-weight: 700;
+      overflow: hidden;
       box-shadow: 0 8px 32px rgba(0,0,0,0.2),
                   0 0 0 4px rgba(255,255,255,0.15);
       position: relative;
+    }
+
+    .hero-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
     }
 
     .hero-avatar::after {
@@ -713,7 +713,7 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-badge">馨宇心理咨询</div>
-      <div class="hero-avatar">伟</div>
+      <div class="hero-avatar"><img src="avatar.jpg" alt="周大伟"></div>
       <h1 class="hero-name">周大伟</h1>
       <p class="hero-title">心理咨询师 · 存在-人本主义取向</p>
       <div class="hero-tags">
